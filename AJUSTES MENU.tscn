@@ -1,0 +1,266 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://AJUSTES MENU.gd" type="Script" id=1]
+[ext_resource path="res://Raslani Hip Hop.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = ExtResource( 2 )
+
+[node name="AJUSTES MENU" type="Popup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -343.0
+margin_top = -233.5
+margin_right = 343.0
+margin_bottom = 233.5
+script = ExtResource( 1 )
+
+[node name="COLOR" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.509804, 0.509804, 0.509804, 1 )
+
+[node name="PESTAÑAS" type="TabContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 8.0
+margin_bottom = 36.0
+tab_align = 0
+
+[node name="VIDEO" type="Tabs" parent="PESTAÑAS"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+custom_fonts/font = SubResource( 5 )
+tab_align = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="PESTAÑAS/VIDEO"]
+margin_right = 674.0
+margin_bottom = 459.0
+
+[node name="VIDEO AJUSTES" type="GridContainer" parent="PESTAÑAS/VIDEO/MarginContainer"]
+margin_right = 674.0
+margin_bottom = 459.0
+columns = 2
+
+[node name="MODO DE PANTALLA" type="Label" parent="PESTAÑAS/VIDEO/MarginContainer/VIDEO AJUSTES"]
+margin_top = 3.0
+margin_right = 184.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 1 )
+text = "Display Mode"
+
+[node name="OptionButton" type="OptionButton" parent="PESTAÑAS/VIDEO/MarginContainer/VIDEO AJUSTES"]
+margin_left = 547.0
+margin_right = 674.0
+margin_bottom = 41.0
+size_flags_horizontal = 10
+custom_fonts/font = SubResource( 2 )
+text = "Ventana"
+items = [ "Ventana", null, false, 0, null, "Pantalla compelta", null, false, 1, null ]
+selected = 0
+
+[node name="Vsync" type="Label" parent="PESTAÑAS/VIDEO/MarginContainer/VIDEO AJUSTES"]
+margin_top = 49.0
+margin_right = 184.0
+margin_bottom = 84.0
+custom_fonts/font = SubResource( 3 )
+text = "Vsync"
+
+[node name="CheckButton" type="CheckButton" parent="PESTAÑAS/VIDEO/MarginContainer/VIDEO AJUSTES"]
+margin_left = 188.0
+margin_top = 45.0
+margin_right = 674.0
+margin_bottom = 88.0
+custom_fonts/font = SubResource( 4 )
+
+[node name="Vsync2" type="Label" parent="PESTAÑAS/VIDEO/MarginContainer/VIDEO AJUSTES"]
+margin_top = 96.0
+margin_right = 184.0
+margin_bottom = 131.0
+custom_fonts/font = SubResource( 3 )
+text = "Mostrar FPS"
+
+[node name="CheckButton2" type="CheckButton" parent="PESTAÑAS/VIDEO/MarginContainer/VIDEO AJUSTES"]
+margin_left = 188.0
+margin_top = 92.0
+margin_right = 674.0
+margin_bottom = 135.0
+custom_fonts/font = SubResource( 4 )
+
+[node name="MaxFps" type="Label" parent="PESTAÑAS/VIDEO/MarginContainer/VIDEO AJUSTES"]
+margin_top = 139.0
+margin_right = 184.0
+margin_bottom = 174.0
+custom_fonts/font = SubResource( 3 )
+text = "Max FPS"
+
+[node name="MaxFpsContainer" type="HBoxContainer" parent="PESTAÑAS/VIDEO/MarginContainer/VIDEO AJUSTES"]
+margin_left = 228.0
+margin_top = 139.0
+margin_right = 674.0
+margin_bottom = 174.0
+size_flags_horizontal = 10
+
+[node name="Max" type="Label" parent="PESTAÑAS/VIDEO/MarginContainer/VIDEO AJUSTES/MaxFpsContainer"]
+margin_right = 42.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 3 )
+text = "max"
+
+[node name="HSlider" type="HSlider" parent="PESTAÑAS/VIDEO/MarginContainer/VIDEO AJUSTES/MaxFpsContainer"]
+margin_left = 46.0
+margin_right = 446.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 400, 0 )
+size_flags_horizontal = 8
+size_flags_vertical = 1
+min_value = 30.0
+max_value = 500.0
+value = 500.0
+rounded = true
+
+[node name="Brillo" type="Label" parent="PESTAÑAS/VIDEO/MarginContainer/VIDEO AJUSTES"]
+margin_top = 178.0
+margin_right = 184.0
+margin_bottom = 213.0
+custom_fonts/font = SubResource( 3 )
+text = "Brillo"
+
+[node name="MaxFpsContainer2" type="HBoxContainer" parent="PESTAÑAS/VIDEO/MarginContainer/VIDEO AJUSTES"]
+margin_left = 228.0
+margin_top = 178.0
+margin_right = 674.0
+margin_bottom = 213.0
+size_flags_horizontal = 10
+
+[node name="Max" type="Label" parent="PESTAÑAS/VIDEO/MarginContainer/VIDEO AJUSTES/MaxFpsContainer2"]
+margin_right = 42.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 3 )
+text = "max"
+
+[node name="HSlider" type="HSlider" parent="PESTAÑAS/VIDEO/MarginContainer/VIDEO AJUSTES/MaxFpsContainer2"]
+margin_left = 46.0
+margin_right = 446.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 400, 0 )
+size_flags_horizontal = 8
+size_flags_vertical = 1
+max_value = 2.0
+step = 0.1
+value = 1.0
+
+[node name="AUDIO" type="Tabs" parent="PESTAÑAS"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PESTAÑAS/AUDIO"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="GridContainer" type="GridContainer" parent="PESTAÑAS/AUDIO/MarginContainer"]
+margin_right = 686.0
+margin_bottom = 467.0
+columns = 2
+
+[node name="Volumen" type="Label" parent="PESTAÑAS/AUDIO/MarginContainer/GridContainer"]
+margin_right = 282.0
+margin_bottom = 35.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "Volumen"
+
+[node name="VolumenLine" type="HBoxContainer" parent="PESTAÑAS/AUDIO/MarginContainer/GridContainer"]
+margin_left = 286.0
+margin_right = 686.0
+margin_bottom = 35.0
+size_flags_horizontal = 10
+
+[node name="HSlider" type="HSlider" parent="PESTAÑAS/AUDIO/MarginContainer/GridContainer/VolumenLine"]
+margin_right = 400.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 400, 0 )
+size_flags_horizontal = 8
+size_flags_vertical = 1
+min_value = -50.0
+max_value = 0.0
+value = -15.0
+rounded = true
+
+[node name="Musica" type="Label" parent="PESTAÑAS/AUDIO/MarginContainer/GridContainer"]
+margin_top = 39.0
+margin_right = 282.0
+margin_bottom = 74.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "Musica"
+
+[node name="Musicaline" type="HBoxContainer" parent="PESTAÑAS/AUDIO/MarginContainer/GridContainer"]
+margin_left = 286.0
+margin_top = 39.0
+margin_right = 686.0
+margin_bottom = 74.0
+size_flags_horizontal = 10
+
+[node name="HSlider" type="HSlider" parent="PESTAÑAS/AUDIO/MarginContainer/GridContainer/Musicaline"]
+margin_right = 400.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 400, 0 )
+size_flags_horizontal = 8
+size_flags_vertical = 1
+min_value = -50.0
+max_value = 0.0
+value = -15.0
+rounded = true
+
+[node name="Brillo3" type="Label" parent="PESTAÑAS/AUDIO/MarginContainer/GridContainer"]
+margin_top = 78.0
+margin_right = 282.0
+margin_bottom = 113.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "Brillo"
+
+[node name="MaxFpsContainer4" type="HBoxContainer" parent="PESTAÑAS/AUDIO/MarginContainer/GridContainer"]
+margin_left = 286.0
+margin_top = 78.0
+margin_right = 686.0
+margin_bottom = 113.0
+size_flags_horizontal = 10
+
+[node name="HSlider" type="HSlider" parent="PESTAÑAS/AUDIO/MarginContainer/GridContainer/MaxFpsContainer4"]
+margin_right = 400.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 400, 0 )
+size_flags_horizontal = 8
+size_flags_vertical = 1
+min_value = -50.0
+max_value = 0.0
+value = -15.0
+rounded = true
