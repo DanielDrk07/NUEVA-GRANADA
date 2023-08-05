@@ -1,0 +1,70 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://playere.gd" type="Script" id=1]
+[ext_resource path="res://sprites/policia0002.png" type="Texture" id=2]
+[ext_resource path="res://sprites/policia0006.png" type="Texture" id=3]
+[ext_resource path="res://sprites/policia0003.png" type="Texture" id=4]
+[ext_resource path="res://sprites/policia0008.png" type="Texture" id=5]
+[ext_resource path="res://sprites/policia0007.png" type="Texture" id=6]
+[ext_resource path="res://sprites/policia0009.png" type="Texture" id=7]
+[ext_resource path="res://sprites/policia0010.png" type="Texture" id=8]
+[ext_resource path="res://sprites/policia0000.png" type="Texture" id=9]
+[ext_resource path="res://sprites/policia0004.png" type="Texture" id=10]
+[ext_resource path="res://sprites/policia0005.png" type="Texture" id=11]
+[ext_resource path="res://escenario_casi_completo 23.jpg" type="Texture" id=12]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 8, 3840, 8, 3840, 705, 0, 705 )
+
+[sub_resource type="TileSet" id=2]
+resource_local_to_scene = true
+0/name = "escenario_casi_completo 23.jpg 0"
+0/texture = ExtResource( 12 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, -8, 3841, 705 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 2 ), ExtResource( 11 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 6.0
+} ]
+
+[node name="Node" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 80, 32 )
+scale = Vector2( 0.083182, 0.24707 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 16, 10 )
+format = 1
+tile_data = PoolIntArray( -655420, 0, 0 )
+
+[node name="playere" type="KinematicBody2D" parent="TileMap"]
+position = Vector2( 204.371, 12.1423 )
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="TileMap/playere"]
+position = Vector2( -1105, 427 )
+scale = Vector2( 0.764706, 0.732264 )
+frames = SubResource( 3 )
+frame = 3
+playing = true
